@@ -1,0 +1,47 @@
+\page component_diagram Component diagram
+
+# PPP Component Diagram
+
+```{uml}
+@startuml
+<style>
+componentDiagram {
+   arrow {
+      FontSize 8
+   }
+}
+</style>
+
+title PPP Software Component Diagram
+
+package "HAL" {
+    [HAL_SERVICE]
+    [HAL_PPP]
+    [HAL_DMA]
+}
+
+package "Low Layer" {
+    [LL_PPP]
+    [CMSIS]
+    [PPP Interrupt routine service]
+    [DMA Interrupt routine service]
+}
+
+package "HW" {
+    [STM32_HW]
+}
+
+[Appli] --> [HAL_PPP] : HAL PPP API
+[Appli] <-- [HAL_PPP] : PPP callback
+[HAL_PPP] --> [LL_PPP] : LL PPP API
+[HAL_PPP] -r-> [HAL_DMA] : HAL DMA_Start_IT\nHAL_DMA_Abort_IT
+[HAL_PPP] -l-> [HAL_SERVICE] : HAL_GetTick
+[HAL_PPP] <-- [PPP Interrupt routine service]
+[HAL_PPP] <-r- [HAL_DMA]:Half transfer complete\nTransfer complete\nError
+[LL_PPP] --> [CMSIS]:PPP register def
+[HAL_DMA] <-d- [DMA Interrupt routine service]
+[STM32_HW] -u--> [PPP Interrupt routine service]: PPPx Irq
+[STM32_HW] -u--> [DMA Interrupt routine service] : DMA Channel Irq
+[STM32_HW] <-u-- [LL_PPP] : PPP registers R/W
+@enduml
+```

@@ -1,0 +1,8 @@
+verison: 2
+
+
+build:
+  os: "ubuntu-20.04"
+  tools:
+    python: "3.9"
+    
