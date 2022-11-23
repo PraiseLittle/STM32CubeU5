@@ -140,14 +140,14 @@ if __name__ == '__main__':
 
     #TODO Create a dict
 
-    path_folder_doxygen = os.path.abspath("../_build/doxygen") 
+    path_folder_doxygen = os.path.abspath("_build/doxygen") 
     path_folder_api = os.path.abspath("API")
     path_index = os.path.abspath("index.rst")
     device_file = os.path.abspath("devices.txt")
     project_name = "STM32Cube"
     file_doxygen = os.path.abspath("doxygenConfiguration_reduced.dox")
     input_path_source = os.path.abspath("../../Drivers/STM32U5xx_HAL_Driver")
-    log_path = os.path.abspath("../_log/")
+    log_path = os.path.abspath("_log/")
     input_path_source_CMSIS = os.path.abspath("../../Drivers/CMSIS/Device/ST/STM32U5xx/Include")
 
 
