@@ -18,7 +18,7 @@ build:
       - echo `date`
     post_install:
       - echo "Test Pre Build jobs"
-      - python -m docs/sources/generate_doxygen_api
+      - python docs/sources/generate_doxygen_api.py
 
 sphinx:
    configuration: docs/sources/conf.py
