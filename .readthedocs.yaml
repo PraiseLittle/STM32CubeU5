@@ -7,9 +7,8 @@ formats:
 build:
   os: "ubuntu-22.04"
   tools:
-    python: 
-      version: "3.10"
-  apt-packages:
+    python: "3.10"
+  apt_packages:
     - graphviz
   jobs:
     pre_create_environment:
