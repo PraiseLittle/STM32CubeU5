@@ -476,10 +476,6 @@ $(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_cortex.c \
 $(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_cortex.h \ 
 $(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_crc.c \ 
 $(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_crc.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_cryp.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_cryp.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_cryp_ex.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_cryp_ex.h \ 
 $(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_dma.c \ 
 $(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_dma.h \ 
 $(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_dma2d.c \ 
