@@ -127,6 +127,12 @@ if __name__ == '__main__':
 
     # TODO Create a Parser for better implementation
 
+    path_project_base = os.getcwd()
+    
+    path_file = os.path.dirname(__file__)
+
+    os.chdir(path_file)
+
     path_folder_doxygen = os.path.abspath("../_build/doxygen")
     path_folder_api = os.path.abspath("API")
     path_index = os.path.abspath("index.rst")
@@ -148,3 +154,6 @@ if __name__ == '__main__':
         device.create_doxygen(project_name,file_doxygen, input_path_source, path_folder_doxygen, input_path_source_CMSIS)
         device.create_api_doc(project_name, path_folder_doxygen, path_folder_api)
         device.create_rst_header(path_index)
+
+
+    os.chdir(path_project_base)
