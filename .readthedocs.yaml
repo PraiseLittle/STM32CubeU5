@@ -12,13 +12,10 @@ build:
     - graphviz
     - plantuml
   jobs:
-    pre_create_environment:
-      - echo "Command run at 'pre_create_environment' step"
     post_build:
-      - echo "Command run at 'post_build' step"
-      - echo `date`
+      - python docs/sources/check_arb.py
     post_install:
-      - echo "Test Pre Build jobs"
+      - python docs/sources/check_arb.py
       - python docs/sources/generate_doxygen_api.py
 
 sphinx:
