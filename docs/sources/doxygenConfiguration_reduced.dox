@@ -470,55 +470,10 @@ INPUT                  = $(PATH_DOC_SOURCE)/stm32u5xx_hal_conf.h \
 $(INPUT_PATH_SOURCE)/Inc/Legacy \ 
 $(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal.c \ 
 $(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_cordic.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_cordic.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_cortex.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_cortex.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_crc.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_crc.h \ 
 $(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_dma.c \ 
 $(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_dma.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_dma2d.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_dma2d.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_dma_ex.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_dma_ex.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_gpio.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_gpio.h \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_gpio_ex.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_ltdc.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_ltdc.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_ltdc_ex.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_ltdc_ex.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_mdf.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_mdf.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_nand.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_nand.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_nor.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_nor.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_pssi.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_pssi.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_pwr.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_pwr.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_pwr_ex.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_pwr_ex.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_ramcfg.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_ramcfg.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_rcc.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_rcc.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_rcc_ex.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_rcc_ex.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_rng.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_rng.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_rng_ex.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_rng_ex.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_rtc.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_rtc.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_rtc_ex.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_rtc_ex.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_spi.c \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_tim.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_tim.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_tim_ex.c 
+
+
 
 # This tag can be used to specify the character encoding of the source files that 
 # doxygen parses. Internally doxygen uses the UTF-8 encoding, which is also the default 
