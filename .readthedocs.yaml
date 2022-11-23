@@ -1,14 +1,16 @@
 verison: 2
 
-
 build:
   os: "ubuntu-20.04"
   tools:
     python: "3.10"
-     install:
-      - requirements: docs/requirements.txt
   jobs:
     pre_build:
       - echo "Test Pre Build jobs"
       - python -m docs/sources/generate_doxygen_api
+
+python:
+  install:
+    - requirements: docs/requirements.txt
+    - method: pip
 
