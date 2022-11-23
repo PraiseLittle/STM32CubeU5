@@ -9,7 +9,14 @@ build:
   tools:
     python: 
       version: "3.10"
+  apt-packages:
+    - graphviz
   jobs:
+    pre_create_environment:
+      - echo "Command run at 'pre_create_environment' step"
+    post_build:
+      - echo "Command run at 'post_build' step"
+      - echo `date`
     post_install:
       - echo "Test Pre Build jobs"
       - python -m docs/sources/generate_doxygen_api
