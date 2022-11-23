@@ -7,6 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 import sys
+import os
 
 project = 'U5 devices'
 copyright = '2022, STMicroelectronics'
@@ -27,9 +28,10 @@ templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 
-
-breathe_projects = {"STM32Cube_U585": "../_build/doxygen/U585/xml/", "STM32Cube_U575":"../_build/doxygen/U575/xml/"}
-breathe_domain_by_extension = {"h": "cpp"}  
+path_file = os.path.dirname(__path__)
+print(f"This is the path file {path_file} and this is the working dir {os.getcwd()}")
+breathe_projects = {"STM32Cube_U585": f"{path_file}/../_build/doxygen/U585/xml/", "STM32Cube_U575":f"{path_file}/../_build/doxygen/U575/xml/"}
+breathe_domain_by_extension = {"h": "c"}
 
 exclude_patterns = ['breathe/*']
 

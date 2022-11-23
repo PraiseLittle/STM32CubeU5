@@ -17,6 +17,7 @@ build:
     post_install:
       - python docs/sources/check_arb.py
       - python docs/sources/generate_doxygen_api.py
+      - python docs/sources/check_arb.py
 
 sphinx:
    configuration: docs/sources/conf.py
