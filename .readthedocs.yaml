@@ -1,7 +1,11 @@
 verison: 2
 
+formats:
+  - pdf
+  - htmlzip
+
 build:
-  os: "ubuntu-20.04"
+  os: "ubuntu-22.04"
   tools:
     python: 
       version: "3.10"
@@ -12,9 +16,11 @@ build:
 
 sphinx:
    configuration: docs/sources/conf.py
+   builder: html
 
 python: 
   install:
     - method: pip
     - requirements: docs/requirements.txt
+  system_packages: true
     
