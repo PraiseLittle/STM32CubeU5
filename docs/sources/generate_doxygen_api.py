@@ -14,7 +14,8 @@ def create_folders( output_folder_path):
 
     if os.path.exists(output_folder_path):
         print(f"{output_folder_path} exist")
-    else: 
+    else:
+        print(f"{output_folder_path} creation")
         os.makedirs(output_folder_path)
 
 
