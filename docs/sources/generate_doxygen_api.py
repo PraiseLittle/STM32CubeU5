@@ -103,7 +103,7 @@ class Device:
             f"-p", f"{project_name_device}" ], cwd=os.getcwd())
 
     def create_rst_header(self,index_path):
-        print(f"Create RST index for API_{self.name} on {index_path}}")
+        print(f"Create RST index for API_{self.name} on {index_path}")
         #TODO Change this to a better way 
         with open(f"{index_path}","a") as f_rst:
             text_append = f"""
