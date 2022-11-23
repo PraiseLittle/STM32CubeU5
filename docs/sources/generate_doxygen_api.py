@@ -73,7 +73,8 @@ class Device:
             "INPUT_PATH_SOURCE": input_path_source,
             "PROJECT_NAME_DOXYGEN":project_name_device,
             "OUTPUT_DIRECTORY_XML":output_folder_path_doxygen_device,
-            "INPUT_PATH_CMSIS": input_path_source_CMSIS
+            "INPUT_PATH_CMSIS": input_path_source_CMSIS,
+            "PATH_DOC_SOURCE": os.getcwd()
         }
 
         set_environnement_variables(dict_values_environement)

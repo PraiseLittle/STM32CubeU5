@@ -465,7 +465,7 @@ WARN_LOGFILE           = doxygen.log
 # directories like "/usr/src/myproject". Separate the files or directories 
 # with spaces.
 
-INPUT                  = ./stm32u5xx_hal_conf.h \                 
+INPUT                  = $(PATH_DOC_SOURCE)/stm32u5xx_hal_conf.h \                 
                           \ 
 $(INPUT_PATH_SOURCE)/Inc/Legacy \ 
 $(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal.c \ 
