@@ -123,7 +123,7 @@ API for device {self.name}
         
 
         
-def check_index(path):
+def check_index(index_path):
     with open(f"{index_path}","a") as f_rst:
         print(f_rst.readlines())
     
