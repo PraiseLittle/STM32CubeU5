@@ -41,5 +41,3 @@ exclude_patterns = ['breathe/*']
 html_theme = "sphinx_rtd_theme"
 html_static_path = ['../_static']
 html_logo='../_static/ST_logo_2020_blue_no_tagline_rgb.svg'
-
-set BUILDDIR=your/path/to/build
