@@ -67,7 +67,7 @@ class Device:
         output_folder_path_doxygen_device = os.path.join(f"{output_folder_path_doxygen}",f"{self.name}\\")
         project_name_device = os.path.join(f"{project_name}",f"{self.name}\\")
         
-        
+        create_folders(output_folder_path_doxygen_device)
         dict_values_environement ={
             "DEVICE": self.name,
             "INPUT_PATH_SOURCE": input_path_source,
@@ -78,7 +78,7 @@ class Device:
 
         set_environnement_variables(dict_values_environement)
 
-        create_folders(output_folder_path_doxygen_device)
+        
 
         log_file = logging.getLogger().handlers[0].baseFilename
 
@@ -91,7 +91,7 @@ class Device:
         input_folder_path_doxygen_device = os.path.join(f"{input_folder_path_doxygen}",f"{self.name}","xml")
         project_name_device = f"{project_name}_{self.name}"
 
-        #create_folders(output_folder_path_rst_device)
+        create_folders(output_folder_path_rst_device)
 
         log_file = logging.getLogger().handlers[0].baseFilename
 
