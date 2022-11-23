@@ -30,7 +30,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 path_file = os.path.dirname(__file__)
 print(f"This is the path file {path_file} and this is the working dir {os.getcwd()}")
-breathe_projects = {"STM32Cube_U585": f"{path_file}/../_build/doxygen/U585/xml/", "STM32Cube_U575":f"{path_file}/../_build/doxygen/U575/xml/"}
+breathe_projects = {"STM32Cube_U585": f"_build/doxygen/U585/xml/", "STM32Cube_U575":f"_build/doxygen/U575/xml/"}
 breathe_domain_by_extension = {"h": "c"}
 
 exclude_patterns = ['breathe/*']
