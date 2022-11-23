@@ -123,7 +123,9 @@ API for device {self.name}
         
 
         
-
+def check_index(path):
+    with open(f"{index_path}","a") as f_rst:
+        print(f_rst.readlines())
     
 
 if __name__ == '__main__':
@@ -166,5 +168,5 @@ if __name__ == '__main__':
         device.create_api_doc(project_name, path_folder_doxygen, path_folder_api)
         device.create_rst_header(path_index)
 
-
+    check_index(path_index)
     os.chdir(path_project_base)
