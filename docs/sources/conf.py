@@ -21,7 +21,7 @@ extensions=['breathe', 'sphinx_rtd_theme','sphinx.ext.autodoc','myst_parser','sp
 if sys.platform == "win32":
     plantuml = "java.exe -jar C:/Users/darochaj/Work/WorkDoc/STM32CubeU5/docs/sources/PlantUML/plantuml.jar"
 else:
-    plantuml = "/usr/bin/plantuml" #TODO better ?
+    plantuml = "plantuml" #TODO better ?
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']

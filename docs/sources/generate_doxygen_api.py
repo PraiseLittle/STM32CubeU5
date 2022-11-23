@@ -69,9 +69,9 @@ class Device:
         
         dict_values_environement ={
             "DEVICE": self.name,
-            "INPUT_PATH": input_path_source,
-            "PROJECT_NAME":project_name_device,
-            "OUTPUT_DIRECTORY":output_folder_path_doxygen_device,
+            "INPUT_PATH_SOURCE": input_path_source,
+            "PROJECT_NAME_DOXYGEN":project_name_device,
+            "OUTPUT_DIRECTORY_XML":output_folder_path_doxygen_device,
             "INPUT_PATH_CMSIS": input_path_source_CMSIS
         }
 

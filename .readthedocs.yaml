@@ -10,6 +10,7 @@ build:
     python: "3.10"
   apt_packages:
     - graphviz
+    - plantuml
   jobs:
     pre_create_environment:
       - echo "Command run at 'pre_create_environment' step"

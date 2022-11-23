@@ -25,7 +25,7 @@ DOXYFILE_ENCODING      = UTF-8
 # The PROJECT_NAME tag is a single word (or a sequence of words surrounded 
 # by quotes) that should identify the project.
 
-PROJECT_NAME           = $(PROJECT_NAME)
+PROJECT_NAME           = $(PROJECT_NAME_DOXYGEN)
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. 
 # This could be handy for archiving the generated documentation or 
@@ -38,7 +38,7 @@ PROJECT_NUMBER         =
 # If a relative path is entered, it will be relative to the location 
 # where doxygen was started. If left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = $(OUTPUT_DIRECTORY)
+OUTPUT_DIRECTORY       = $(OUTPUT_DIRECTORY_XML)
 
 # If the CREATE_SUBDIRS tag is set to YES, then doxygen will create 
 # 4096 sub-directories (in 2 levels) under the output directory of each output 
@@ -467,64 +467,64 @@ WARN_LOGFILE           = doxygen.log
 
 INPUT                  = .\stm32u5xx_hal_conf.h \                 
                           \ 
-$(INPUT_PATH)\Inc\Legacy \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_cordic.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_cordic.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_cortex.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_cortex.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_crc.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_crc.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_crc_ex.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_crc_ex.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_cryp.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_cryp.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_cryp_ex.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_cryp_ex.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_dma.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_dma.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_dma2d.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_dma2d.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_dma_ex.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_dma_ex.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_gpio.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_gpio.h \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_gpio_ex.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_ltdc.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_ltdc.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_ltdc_ex.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_ltdc_ex.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_mdf.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_mdf.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_nand.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_nand.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_nor.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_nor.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_pssi.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_pssi.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_pwr.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_pwr.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_pwr_ex.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_pwr_ex.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_ramcfg.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_ramcfg.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_rcc.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_rcc.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_rcc_ex.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_rcc_ex.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_rng.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_rng.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_rng_ex.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_rng_ex.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_rtc.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_rtc.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_rtc_ex.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_rtc_ex.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_spi.c \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_tim.c \ 
-$(INPUT_PATH)\Inc\stm32u5xx_hal_tim.h \ 
-$(INPUT_PATH)\Src\stm32u5xx_hal_tim_ex.c 
+$(INPUT_PATH_SOURCE)\Inc\Legacy \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_cordic.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_cordic.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_cortex.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_cortex.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_crc.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_crc.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_crc_ex.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_crc_ex.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_cryp.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_cryp.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_cryp_ex.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_cryp_ex.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_dma.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_dma.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_dma2d.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_dma2d.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_dma_ex.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_dma_ex.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_gpio.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_gpio.h \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_gpio_ex.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_ltdc.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_ltdc.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_ltdc_ex.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_ltdc_ex.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_mdf.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_mdf.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_nand.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_nand.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_nor.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_nor.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_pssi.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_pssi.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_pwr.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_pwr.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_pwr_ex.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_pwr_ex.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_ramcfg.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_ramcfg.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_rcc.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_rcc.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_rcc_ex.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_rcc_ex.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_rng.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_rng.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_rng_ex.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_rng_ex.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_rtc.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_rtc.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_rtc_ex.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_rtc_ex.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_spi.c \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_tim.c \ 
+$(INPUT_PATH_SOURCE)\Inc\stm32u5xx_hal_tim.h \ 
+$(INPUT_PATH_SOURCE)\Src\stm32u5xx_hal_tim_ex.c 
 
 # This tag can be used to specify the character encoding of the source files that 
 # doxygen parses. Internally doxygen uses the UTF-8 encoding, which is also the default 
@@ -1075,8 +1075,8 @@ SEARCH_INCLUDES        = YES
 # the preprocessor.
 
 INCLUDE_PATH           = . \       
-                         $(INPUT_PATH_CMSIS) \
-                         $(INPUT_PATH)\inc
+                         $(INPUT_PATH_SOURCE_CMSIS) \
+                         $(INPUT_PATH_SOURCE)\inc
 
 # You can use the INCLUDE_FILE_PATTERNS tag to specify one or more wildcard 
 # patterns (like *.h and *.hpp) to filter out the header-files in the 
