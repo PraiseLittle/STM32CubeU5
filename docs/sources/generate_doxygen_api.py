@@ -64,8 +64,8 @@ class Device:
 
     def create_doxygen(self, project_name, file_doxygen, input_path_source, output_folder_path_doxygen,input_path_source_CMSIS ):
         
-        output_folder_path_doxygen_device = os.path.join(f"{output_folder_path_doxygen}",f"{self.name}\\")
-        project_name_device = os.path.join(f"{project_name}",f"{self.name}\\")
+        output_folder_path_doxygen_device = os.path.join(f"{output_folder_path_doxygen}",f"{self.name}")
+        project_name_device = os.path.join(f"{project_name}",f"{self.name}")
         
         create_folders(output_folder_path_doxygen_device)
         dict_values_environement ={
