@@ -28,7 +28,7 @@ templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 
-path_file = os.path.dirname(__path__)
+path_file = os.path.dirname(__file__)
 print(f"This is the path file {path_file} and this is the working dir {os.getcwd()}")
 breathe_projects = {"STM32Cube_U585": f"{path_file}/../_build/doxygen/U585/xml/", "STM32Cube_U575":f"{path_file}/../_build/doxygen/U575/xml/"}
 breathe_domain_by_extension = {"h": "c"}
@@ -41,3 +41,5 @@ exclude_patterns = ['breathe/*']
 html_theme = "sphinx_rtd_theme"
 html_static_path = ['../_static']
 html_logo='../_static/ST_logo_2020_blue_no_tagline_rgb.svg'
+
+set BUILDDIR=your/path/to/build
