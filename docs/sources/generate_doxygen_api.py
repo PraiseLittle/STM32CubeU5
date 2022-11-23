@@ -133,7 +133,9 @@ if __name__ == '__main__':
 
     os.chdir(path_file)
 
-    path_folder_doxygen = os.path.abspath("../_build/doxygen")
+    #TODO Create a dict
+
+    path_folder_doxygen = os.path.abspath("../_build/doxygen") 
     path_folder_api = os.path.abspath("API")
     path_index = os.path.abspath("index.rst")
     device_file = os.path.abspath("devices.txt")
@@ -142,6 +144,12 @@ if __name__ == '__main__':
     input_path_source = os.path.abspath("../../Drivers/STM32U5xx_HAL_Driver")
     log_path = os.path.abspath("../_log/")
     input_path_source_CMSIS = os.path.abspath("../../Drivers/CMSIS/Device/ST/STM32U5xx/Include")
+
+
+
+    print(path_folder_doxygen)
+    print(input_path_source)
+    print(input_path_source_CMSIS)
 
 
     create_log_file(log_path)
