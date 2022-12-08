@@ -27,7 +27,7 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32u5xx.h"
 
-/** @addtogroup STM32U5xx_LL_Driver
+/** @defgroup STM32U5xx_LL_Driver
   * @{
   */
 

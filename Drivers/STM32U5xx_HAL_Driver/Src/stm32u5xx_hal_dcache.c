@@ -19,68 +19,6 @@
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
   ******************************************************************************
-  @verbatim
- ===============================================================================
-                        ##### How to use this driver #####
- ===============================================================================
-  [..]
-   (#) Configure and enable the MPU to override default config if needed, please refers
-       to ARM manual for default memory attribute. Then enable DCache.
-
-    [..]
-        (+) Use HAL_DCACHE_Invalidate() to invalidate the full cache content:
-            (++) Cache content is lost, and reloaded when needed.
-            (++) Used for complete invalidate of the dcache in case.
-            (++) Blocking call until operation is done.
-        (+) Use HAL_DCACHE_InvalidateByAddr() to invalidate cache content for specific range:
-            (++) Cache content for specific range is lost, and reloaded when needed.
-            (++) Used when excepting a buffer to be updated by a peripheral (typically DMA transfer)
-            (++) Blocking call until operation is done.
-        (+) Use HAL_DCACHE_CleanByAddr() to clean cache content for a specific range:
-            (++) Cache content for specific range is written back to memory.
-            (++) Used when buffer is updated by CPU before usage by a peripheral (typically DMA transfer)
-            (++) Blocking call until operation is done.
-        (+) Use HAL_DCACHE_CleanInvalidateByAddr() to clean and invalidate cache content for a specific range:
-            (++) Cache content for specific range is written back to memory, and reloaded when needed.
-            (++) Used when sharing buffer between CPU and other peripheral.
-            (++) Recommended to use for MPU reprogramming.
-            (++) Blocking call until operation is done.
-
-     *** Interrupt mode IO operation ***
-     ===================================
-    [..]
-        (+) Configure the DCACHE interrupt priority using HAL_NVIC_SetPriority()
-        (+) Enable the DCACHE IRQ handler using HAL_NVIC_EnableIRQ()
-        (+) Override weak definition for following callback (if needed):
-            (++)HAL_DCACHE_CleanAndInvalidateByAddrCallback()
-            (++)HAL_DCACHE_InvalidateCompleteCallback()
-            (++)HAL_DCACHE_InvalidateByAddrCallback()
-            (++)HAL_DCACHE_CleanByAddrCallback()
-            (++)HAL_DCACHE_ErrorCallback()
-        (+) Use HAL_DCACHE_<COMMAND>_IT() to start a DCache operation with IT enabled.
-        (+) Use HAL_DCACHE_IRQHandler() called under DCACHE_IRQHandler() Interrupt subroutine
-
-    [..]  Use HAL_DCACHE_GetState() function to return the DCACHE state and HAL_DCACHE_GetError()
-          in case of error detection.
-
-     *** DCACHE HAL driver macros list ***
-     =============================================
-     [..]
-       Below the list of most used macros in DCACHE HAL driver.
-
-      (+) __HAL_DCACHE_ENABLE_IT    : Enable DCACHE interrupts.
-      (+) __HAL_DCACHE_DISABLE_IT   : Disable DCACHE interrupts.
-      (+) __HAL_DCACHE_GET_IT_SOURCE: Check whether the specified DCACHE interrupt source is enabled or not.
-      (+) __HAL_DCACHE_GET_FLAG     : Check whether the selected DCACHE flag is set or not.
-      (+) __HAL_DCACHE_CLEAR_FLAG   : Clear the selected DCACHE flags.
-
-     [..]
-      (@) You can refer to the header file of the DCACHE HAL driver for more useful macros.
-
-    [..]
-
-  @endverbatim
-  ******************************************************************************
   */
 
 /* Includes ------------------------------------------------------------------*/
@@ -93,6 +31,56 @@
 /** @defgroup DCACHE DCACHE
   * @brief HAL DCACHE module driver
   * @{
+  * 
+  * # How to use this driver
+  * Configure and enable the MPU to override default config if needed, please refers
+  * to ARM manual for default memory attribute. Then enable DCache.
+  * 
+  * * Use HAL_DCACHE_Invalidate() to invalidate the full cache content:
+  *   * Cache content is lost, and reloaded when needed.
+  *   * Used for complete invalidate of the dcache in case.
+  *   * Blocking call until operation is done.
+  * * Use HAL_DCACHE_InvalidateByAddr() to invalidate cache content for specific range:
+  *   * Cache content for specific range is lost, and reloaded when needed.
+  *   * Used when excepting a buffer to be updated by a peripheral (typically DMA transfer)
+  *   * Blocking call until operation is done.
+  * * Use HAL_DCACHE_CleanByAddr() to clean cache content for a specific range:
+  *   * Cache content for specific range is written back to memory.
+  *   * Used when buffer is updated by CPU before usage by a peripheral (typically DMA transfer)
+  *   * Blocking call until operation is done.
+  * * Use HAL_DCACHE_CleanInvalidateByAddr() to clean and invalidate cache content for a specific range:
+  *   * Cache content for specific range is written back to memory, and reloaded when needed.
+  *   * Used when sharing buffer between CPU and other peripheral. 
+  * 
+  * ## Interrupt mode IO operation
+  * 
+  * * Configure the DCACHE interrupt priority using HAL_NVIC_SetPriority()
+  * * Enable the DCACHE IRQ handler using HAL_NVIC_EnableIRQ()
+  * * Override weak definition for following callback (if needed):
+  *   * HAL_DCACHE_CleanAndInvalidateByAddrCallback()
+  *   * HAL_DCACHE_InvalidateCompleteCallback()
+  *   * HAL_DCACHE_InvalidateByAddrCallback()
+  *   * HAL_DCACHE_CleanByAddrCallback()
+  *   * HAL_DCACHE_ErrorCallback()
+  * * Use HAL_DCACHE_<COMMAND>_IT() to start a DCache operation with IT enabled.
+  * * Use HAL_DCACHE_IRQHandler() called under DCACHE_IRQHandler() Interrupt subroutine
+  * 
+  * Use HAL_DCACHE_GetState() function to return the DCACHE state and HAL_DCACHE_GetError()
+  * in case of error detection.
+  * 
+  * ## DCACHE HAL driver macros list
+  * 
+  * Below the list of most used macros in DCACHE HAL driver.
+  * 
+  * * __HAL_DCACHE_ENABLE_IT    : Enable DCACHE interrupts.
+  * * __HAL_DCACHE_DISABLE_IT   : Disable DCACHE interrupts.
+  * * __HAL_DCACHE_GET_IT_SOURCE: Check whether the specified DCACHE interrupt source is enabled or not.
+  * * __HAL_DCACHE_GET_FLAG     : Check whether the selected DCACHE flag is set or not.
+  * * __HAL_DCACHE_CLEAR_FLAG   : Clear the selected DCACHE flags.
+  * 
+  * You can refer to the header file of the DCACHE HAL driver for more useful macros.
+  * 
+  * 
   */
 #ifdef HAL_DCACHE_MODULE_ENABLED
 
@@ -149,25 +137,18 @@ static HAL_StatusTypeDef DCACHE_CommandByAddr(DCACHE_HandleTypeDef *hdcache, uin
 /** @defgroup DCACHE_Exported_Functions_Group1 Initialization and de-initialization functions
   *  @brief    Initialization and Configuration functions
   *
-@verbatim
- ===============================================================================
-              ##### Initialization and de-initialization functions #####
- ===============================================================================
-    [..]  This subsection provides a set of functions allowing to initialize and
-          deinitialize the DCACHEx peripheral:
-
-      (+) User must implement HAL_DCACHE_MspInit() function in which he configures
-          all related peripherals resources (CLOCK, MPU, IT and NVIC ).
-
-      (+) Call the function HAL_DCACHE_Init() to configure the selected device with
-          the selected configuration:
-        (++) ReadBurstType
-
-      (+) Call the function HAL_DCACHE_DeInit() to restore the reset configuration
-          of the selected DCACHEx peripheral.
-
-@endverbatim
   * @{
+  *    ### Initialization and de-initialization functions 
+  * 
+  * This subsection provides a set of functions allowing to initialize and 
+  * deinitialize the DCACHEx peripheral:
+  * * User must implement HAL_DCACHE_MspInit() function in which he configures 
+  * all related peripherals resources (CLOCK, MPU, IT and NVIC ).
+  * * Call the function HAL_DCACHE_Init() to configure the selected device with 
+  * the selected configuration:
+  *   * ReadBurstType
+  * * Call the function HAL_DCACHE_DeInit() to restore the reset configuration 
+  * of the selected DCACHEx peripheral.
   */
 
 /**
@@ -307,24 +288,20 @@ __weak void HAL_DCACHE_MspDeInit(DCACHE_HandleTypeDef *hdcache)
 /** @defgroup DCACHE_Exported_Functions_Group2 IO operation functions
   *  @brief    IO operation functions
   *
-@verbatim
-  ==============================================================================
-             ##### IO operation functions #####
-  ==============================================================================
-    [..]  This section provides functions allowing to:
-      (+) Enable the Data cache.
-      (+) Disable the Data cache.
-      (+) Set Read Burst Type.
-      (+) Invalidate the Data cache.
-      (+) Invalidate the Data cache with interrupt.
-      (+) Clean the Data cache by Addr.
-      (+) Invalidate the Data cache by Addr.
-      (+) Clean and Invalidate the Data cache by Addr.
-      (+) Clean the Data cache by Addr with interrupt.
-      (+) Invalidate the Data cache by Addr with interrupt.
-      (+) Clean and Invalidate the Data cache by Addr with interrupt.
-@endverbatim
   * @{
+  * ### IO operation functions
+  * This section provides functions allowing to:
+  * * Enable the Data cache.
+  * * Disable the Data cache.
+  * * Set Read Burst Type.
+  * * Invalidate the Data cache.
+  * * Invalidate the Data cache with interrupt.
+  * * Clean the Data cache by Addr.
+  * * Invalidate the Data cache by Addr.
+  * * Clean and Invalidate the Data cache by Addr.
+  * * Clean the Data cache by Addr with interrupt.
+  * * Invalidate the Data cache by Addr with interrupt.
+  * * Clean and Invalidate the Data cache by Addr with interrupt.
   */
 
 /**
@@ -927,16 +904,11 @@ __weak void HAL_DCACHE_ErrorCallback(DCACHE_HandleTypeDef *hdcache)
 /** @defgroup DCACHE_Exported_Functions_Group3 Peripheral State,
   *  @brief   Peripheral State,
   *
-@verbatim
- ===============================================================================
-            #####          Peripheral State          #####
- ===============================================================================
-    [..]
-    This subsection permit to get in run-time the status of the peripheral
-    and the data flow.
-
-@endverbatim
   * @{
+  * 
+  * ### Peripheral State
+  * This subsection permit to get in run-time the status of the peripheral 
+  * and the data flow.
   */
 
 /**

@@ -1,13 +1,12 @@
-##################
 PPP State Machine
-##################
+===================
 
 The following section describes the dynamic behavior of the driver.
 
 
-***************************
+
 Single process at a time
-***************************
+--------------------------
 
 .. uml::
 
@@ -105,9 +104,9 @@ Single process at a time
     @enduml
 
 
-*************************************
+
 Multi process can run in parallel
-*************************************
+-----------------------------------
 
 .. uml::
 
@@ -202,9 +201,9 @@ Multi process can run in parallel
     @enduml
 
 
-******************************************
+
 Multi sub-instances can run in parallel
-******************************************
+------------------------------------------
 
 .. uml::
 
@@ -287,13 +286,13 @@ Multi sub-instances can run in parallel
 
     @enduml
 
-#######################
-PPP Sequence Diagram
-#######################
 
-*************************************
+PPP Sequence Diagram
+========================
+
+
 User application starting a driver
-*************************************
+------------------------------------------
 
 .. uml::
 
@@ -319,9 +318,8 @@ User application starting a driver
     @enduml
 
 
-*********************************************
 User application starting a DMA transfer
-*********************************************
+-------------------------------------------
 
 .. uml::
 

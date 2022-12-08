@@ -166,7 +166,7 @@ if __name__ == '__main__':
     for device in tqdm(devices):
         device.create_doxygen(project_name,file_doxygen, input_path_source, path_folder_doxygen, input_path_source_CMSIS)
         device.create_api_doc(project_name, path_folder_doxygen, path_folder_api)
-        device.create_rst_header(path_index)
+        #device.create_rst_header(path_index)
 
     check_index(path_index)
     os.chdir(path_project_base)

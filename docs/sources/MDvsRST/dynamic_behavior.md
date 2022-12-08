@@ -2,9 +2,9 @@
 
 The following section describes the dynamic behavior of the driver.
 
-# PPP State Machine
+### PPP State Machine
 
-## Single process at a time
+#### Single process at a time
 
 ```{uml}
 @startuml
@@ -101,7 +101,7 @@ state5 -[#Orange]-> state2 :\
 @enduml
 ```
 
-## Multi process can run in parallel
+#### Multi process can run in parallel
 
 ```{uml}
 @startuml
@@ -196,7 +196,7 @@ join_state --> state2
 @enduml
 ```
 
-## One Single sub-instance active at a time
+#### One Single sub-instance active at a time
 
 ```{uml}
 @startuml
@@ -280,7 +280,7 @@ active ----u> state1 : Non-recoverable error
 @enduml
 ```
 
-## Multi sub-instances can run in parallel
+#### Multi sub-instances can run in parallel
 
 ```{uml}
 @startuml
@@ -362,9 +362,9 @@ active ----u> state1 : Non-recoverable error
 
 @enduml
 ```
-# PPP Sequence Diagram
+### PPP Sequence Diagram
 
-## User application starting a driver
+#### User application starting a driver
 
 ```{uml}
 @startuml
@@ -389,7 +389,7 @@ part2 --> part1
 @enduml
 ```
 
-## User application starting a DMA transfer
+#### User application starting a DMA transfer
 ```{uml}
 @startuml
 "User Application"->"PPP Driver" : HAL_PPP_Xfer_DMA()

@@ -20,28 +20,6 @@
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
   ******************************************************************************
-  @verbatim
- ===============================================================================
-                     ##### How to use this driver #####
- ===============================================================================
-    [..]
-         (+) Enable CRC AHB clock using __HAL_RCC_CRC_CLK_ENABLE();
-         (+) Initialize CRC calculator
-             (++) specify generating polynomial (peripheral default or non-default one)
-             (++) specify initialization value (peripheral default or non-default one)
-             (++) specify input data format
-             (++) specify input or output data inversion mode if any
-         (+) Use HAL_CRC_Accumulate() function to compute the CRC value of the
-             input data buffer starting with the previously computed CRC as
-             initialization value
-         (+) Use HAL_CRC_Calculate() function to compute the CRC value of the
-             input data buffer starting with the defined initialization value
-             (default or non-default) to initiate CRC calculation
-
-  @endverbatim
-  ******************************************************************************
-  */
-
 /* Includes ------------------------------------------------------------------*/
 #include "stm32u5xx_hal.h"
 
@@ -52,6 +30,19 @@
 /** @defgroup CRC CRC
   * @brief CRC HAL module driver.
   * @{
+  * 
+  * # How it works
+  * - Enable CRC AHB clock using __HAL_RCC_CRC_CLK_ENABLE();
+  * - Initialize CRC calculator
+  *   - specify generating polynomial (peripheral default or non-default one)
+  *   - specify initialization value (peripheral default or non-default one)
+  *   - specify inpute data format
+  *   - specify input or output data inversion mode if any
+  * - Use HAL_CRC_Accumulate() function to compute the CRC value of the input data
+  * buffer starting with the previously computed CRC as initialization value
+  * - Use HAL_CRC_Calculate() function to compute the CRC value of the input data 
+  * buffer starting with the defined initialization value (default or non-default)
+  * to initiate CRC calculation
   */
 
 #ifdef HAL_CRC_MODULE_ENABLED
@@ -79,20 +70,18 @@ static uint32_t CRC_Handle_16(CRC_HandleTypeDef *hcrc, uint16_t pBuffer[], uint3
 /** @defgroup CRC_Exported_Functions_Group1 Initialization and de-initialization functions
   *  @brief    Initialization and Configuration functions.
   *
-@verbatim
- ===============================================================================
-            ##### Initialization and de-initialization functions #####
- ===============================================================================
-    [..]  This section provides functions allowing to:
-      (+) Initialize the CRC according to the specified parameters
-          in the CRC_InitTypeDef and create the associated handle
-      (+) DeInitialize the CRC peripheral
-      (+) Initialize the CRC MSP (MCU Specific Package)
-      (+) DeInitialize the CRC MSP
-
-@endverbatim
   * @{
+  * 
+  * ### Initialization and de-initialization functions
+  * 
+  * This section provides functions allowing to:
+  * - Initialize the CRC according to the specified parameters in the CRC_InitTypeDef
+  * and create the associated handle
+  * - DeInitialize the CRC peripheral
+  * - Initialize the CRC MSP (MCU Specific package)
+  * - DeInitialize the CRC MSP
   */
+
 
 /**
   * @brief  Initialize the CRC according to the specified
@@ -225,7 +214,7 @@ __weak void HAL_CRC_MspInit(CRC_HandleTypeDef *hcrc)
   /* Prevent unused argument(s) compilation warning */
   UNUSED(hcrc);
 
-  /* NOTE : This function should not be modified, when the callback is needed,
+  /** @note : This function should not be modified, when the callback is needed,
             the HAL_CRC_MspInit can be implemented in the user file
    */
 }
@@ -252,21 +241,13 @@ __weak void HAL_CRC_MspDeInit(CRC_HandleTypeDef *hcrc)
 /** @defgroup CRC_Exported_Functions_Group2 Peripheral Control functions
   *  @brief    management functions.
   *
-@verbatim
- ===============================================================================
-                      ##### Peripheral Control functions #####
- ===============================================================================
-    [..]  This section provides functions allowing to:
-      (+) compute the 7, 8, 16 or 32-bit CRC value of an 8, 16 or 32-bit data buffer
-          using combination of the previous CRC value and the new one.
-
-       [..]  or
-
-      (+) compute the 7, 8, 16 or 32-bit CRC value of an 8, 16 or 32-bit data buffer
-          independently of the previous CRC value.
-
-@endverbatim
   * @{
+  * ### Peripheral Control functions
+  * This section provides functions allowing to:
+  * * compute the 7, 8, 16 or 32-bit CRC value of an 8, 16 or 32-bit data buffer
+  * using combination of the previous CRC value and the new one.
+  * * compute the 7, 8, 16 or 32-bit CRC value of an 8, 16 or 32-bit data buffer
+  * independently of the previous CRC value.
   */
 
 /**
@@ -387,15 +368,11 @@ uint32_t HAL_CRC_Calculate(CRC_HandleTypeDef *hcrc, uint32_t pBuffer[], uint32_t
 /** @defgroup CRC_Exported_Functions_Group3 Peripheral State functions
   *  @brief    Peripheral State functions.
   *
-@verbatim
- ===============================================================================
-                      ##### Peripheral State functions #####
- ===============================================================================
-    [..]
-    This subsection permits to get in run-time the status of the peripheral.
-
-@endverbatim
   * @{
+  *
+  * ### Peripheral State functions
+  * This subsection permits to get in run-time the status of the peripheral.
+  * 
   */
 
 /**

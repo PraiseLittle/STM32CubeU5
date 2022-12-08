@@ -1,12 +1,13 @@
 Welcome to STM32CubeU5's documentation!
 =======================================
 
+.. include:: presentation.rst
+
+
+
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Modules:
 
-
-   Markdown/main_page
-   Markdown/component_diagram
-   MDvsRST/dynamic_behavior
-   MDvsRST/dynamic_behavior_rst
+   API/hal
+   API/ll

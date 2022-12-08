@@ -467,11 +467,16 @@ WARN_LOGFILE           = doxygen.log
 
 INPUT                  = $(PATH_DOC_SOURCE)/stm32u5xx_hal_conf.h \                 
                           \ 
-$(INPUT_PATH_SOURCE)/Inc/Legacy \ 
 $(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal.c \ 
 $(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal.h \ 
-$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_dma.c \ 
-$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_dma.h \ 
+$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_dcache.c \ 
+$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_dcache.h \
+$(INPUT_PATH_SOURCE)/Src/stm32u5xx_hal_crc.c \ 
+$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_hal_crc.h \
+$(INPUT_PATH_SOURCE)/Src/stm32u5xx_ll_crc.c \
+$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_ll_crc.h \
+$(INPUT_PATH_SOURCE)/Inc/stm32u5xx_ll_dcache.h \
+
 
 
 
@@ -1045,7 +1050,10 @@ INCLUDE_FILE_PATTERNS  =
 PREDEFINED             = USE_FULL_LL_DRIVER \
                          USE_HAL_DRIVER \
                          STM32${DEVICE}xx  \
-                         __ARM_FEATURE_CMSE=3
+                         __ARM_FEATURE_CMSE=3 \
+                         CRC \
+                         DCACHE1 \
+                         DCACHE2
                          
 # If the MACRO_EXPANSION and EXPAND_ONLY_PREDEF tags are set to YES then 
 # this tag can be used to specify a list of macro names that should be expanded. 
