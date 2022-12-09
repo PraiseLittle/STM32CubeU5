@@ -28,3 +28,7 @@ Details about the content of this release are available in the release note [her
 ## Troubleshooting
 
 Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) guide.
+
+## Quality
+
+All our STM32 drivers are SC2 compliant. They are MISRA compliant (put a link), LDRA compliant (link).
